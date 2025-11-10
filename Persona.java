@@ -23,13 +23,16 @@ public class Persona {
     
     public int eta(){
         LocalDate oggi = LocalDate.now();
-        
         Period eta = Period.between(dNscita,oggi);
         return eta.getYears();
     }
 
-    
-    
+    public String leggi(Libro l){
+        return l.getTitolo() + " " + l.leggiTesto();
+    }
+
+
+
     
     @Override
     public String toString() {
