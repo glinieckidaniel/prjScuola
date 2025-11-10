@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Biblioteca {
     private Libro[]Libro;
-
+    private int DimL;
     public Biblioteca(int LibriMax) {
         Libro = new Libro[LibriMax];
-
+        DimL = 0;
     }
 
     public Libro[] getLibro() {
@@ -20,13 +20,18 @@ public class Biblioteca {
 
     private Libro cercaLibro(String L) {
         int i = 0;
-        while (i < Libro.length && !Libro[i].getTitolo().equals(L)) {
+        while (i < DimL && !Libro[i].getTitolo().equals(L)) {
             i++;
 
         }
         return Libro[i];
     }
 
+    public void AggiungiLibro(Libro l1){
+        Libro[DimL] = l1;
+        DimL++;
+
+    }
 
     @Override
     public String toString() {
