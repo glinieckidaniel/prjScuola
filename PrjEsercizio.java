@@ -24,7 +24,11 @@ public class PrjEsercizio {
         System.out.println(pf1.toString());
         Studente st1 = new Studente("Manzoni","Neri",dn);
         System.out.println(st1.toString());
-        
+        Libro l1 = new Libro("Barbarossa",2023,5);
+        Biblioteca b1 = new Biblioteca(10);
+        b1.AggiungiLibro(l1);
+        System.out.println(p1.leggi(b1,"Barbarossa"));
+        System.out.println(p1.leggi(l1));
         
         System.out.println("\n\n --- CLASSE OUTPUT ---");
         Classe c1 = new Classe(10,"R40");
@@ -34,6 +38,7 @@ public class PrjEsercizio {
         System.out.println(c1.toString());
         
     }
+
     
     
 }

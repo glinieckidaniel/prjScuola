@@ -31,6 +31,10 @@ public class Persona {
         return l.getTitolo() + " " + l.leggiTesto();
     }
 
+    public String leggi(Biblioteca b,String titolo){
+        return leggi(b.prendiPrestito(titolo));
+    }
+
 
 
     
